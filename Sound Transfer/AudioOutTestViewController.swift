@@ -19,18 +19,23 @@ class AudioOutTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        oscillator.amplitude = 1
         AudioKit.output = oscillator
         AudioKit.start()
     }
     
     @IBAction func toggleSound() {
+        
         if oscillator.isPlaying {
             oscillator.stop()
             playButton.setTitle("Start sound", for: .normal)
-        }
-        
-        else {
-            oscillator.amplitude = 1
+        } else {
+            
+            if let frequency = Double(broadcastField.text!) {
+                oscillator.frequency = frequency
+            } else {
+                oscillator.frequency = random(500, 5000)
+            }
             oscillator.start()
             
             playEncodedAudio(for: "GGgg")

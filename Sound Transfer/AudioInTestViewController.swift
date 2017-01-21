@@ -12,11 +12,12 @@ import AudioKit
 class AudioInTestViewController : UIViewController {
     
     var mic = AKMicrophone()
+    //var transform = AKFFT
     
     
     override func viewDidLoad() {
         
-        initialize() //initialize c code
+        //initialize() //initialize c code
         
         //prepare microphone
         let highPass = AKHighPassFilter(mic, cutoffFrequency: 1000, resonance: 0)
@@ -29,8 +30,8 @@ class AudioInTestViewController : UIViewController {
         Timer.scheduledTimer(withTimeInterval: (1.0/35.0), repeats: true, block: { _ in
             let frequency = tracker.frequency;
             
-            let cOutput = frame(frequency, nil)
-            print(cOutput)
+            //let cOutput = frame(frequency, nil)
+            //print(cOutput)
         })
         
     }
