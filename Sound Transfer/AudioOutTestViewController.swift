@@ -27,17 +27,36 @@ class AudioOutTestViewController: UIViewController {
         if oscillator.isPlaying {
             oscillator.stop()
             playButton.setTitle("Start sound", for: .normal)
-        } else {
+        }
+        
+        else {
             oscillator.amplitude = 1
-            
-            if let frequency = Double(broadcastField.text!) {
-                oscillator.frequency = frequency
-            } else {
-                oscillator.frequency = random(500, 5000)
-            }
             oscillator.start()
+            
+            playEncodedAudio(for: "GGgg")
+            
             playButton.setTitle("Stop sound", for: .normal)
         }
+    }
+    
+    func playEncodedAudio(for data: SoundConvertible) {
+        let frequencies = data.frequencies
+        var currentIndex = 0
+        
+        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
+            
+            if currentIndex >= frequencies.count {
+                self.toggleSound()
+                timer.invalidate()
+                return
+            }
+            
+            let frequency = frequencies[currentIndex]
+            currentIndex += 1
+            
+            self.oscillator.frequency = Double(frequency) * 2
+            
+        })
     }
     
 

@@ -16,12 +16,14 @@ class AudioInTestViewController : UIViewController {
     
     override func viewDidLoad() {
         
-        let tracker = AKFrequencyTracker.init(mic, hopSize: 200, peakCount: 2000)
+        let highPass = AKHighPassFilter(mic, cutoffFrequency: 1000, resonance: 0)
+        highPass.start()
+        let tracker = AKFrequencyTracker.init(highPass, hopSize: 200, peakCount: 2000)
         
         AudioKit.output = tracker
         AudioKit.start()
         
-        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true, block: { _ in
             print(tracker.frequency)
         })
         

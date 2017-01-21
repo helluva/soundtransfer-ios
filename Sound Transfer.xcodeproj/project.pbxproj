@@ -12,20 +12,21 @@
 		2E1F81C81E331C9A00E4B5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C71E331C9A00E4B5DE /* Assets.xcassets */; };
 		2E1F81CB1E331C9A00E4B5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C91E331C9A00E4B5DE /* LaunchScreen.storyboard */; };
 		2E1F81DD1E33289100E4B5DE /* AudioInTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */; };
-		2E1F81DE1E333B6500E4B5DE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; };
-		2E1F81DF1E333B6500E4B5DE /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C3590CC11E3330FF00303ECD /* hello.c in Sources */ = {isa = PBXBuildFile; fileRef = C3590CBF1E3330FF00303ECD /* hello.c */; };
+		2E1F81E31E333F0A00E4B5DE /* simplebinary.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81E11E333F0A00E4B5DE /* simplebinary.c */; };
+		2E1F81E51E333F5C00E4B5DE /* SoundConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81E41E333F5C00E4B5DE /* SoundConvertible.swift */; };
+		2E1F81E61E33431B00E4B5DE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; };
+		2E1F81E71E33431B00E4B5DE /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3A731871E3326B400D09D6E /* AudioOutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E1F81E01E333B6500E4B5DE /* Embed Frameworks */ = {
+		2E1F81E81E33431B00E4B5DE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E1F81DF1E333B6500E4B5DE /* AudioKit.framework in Embed Frameworks */,
+				2E1F81E71E33431B00E4B5DE /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +42,9 @@
 		2E1F81CC1E331C9A00E4B5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1F81DB1E33212B00E4B5DE /* C-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "C-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioInTestViewController.swift; sourceTree = "<group>"; };
-		C3590CBF1E3330FF00303ECD /* hello.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hello.c; path = "soundtransfer-c/Sound Transfer/hello.c"; sourceTree = "<group>"; };
-		C3590CC01E3330FF00303ECD /* hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hello.h; path = "soundtransfer-c/Sound Transfer/hello.h"; sourceTree = "<group>"; };
+		2E1F81E11E333F0A00E4B5DE /* simplebinary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = simplebinary.c; path = "soundtransfer-c/test1/simplebinary.c"; sourceTree = "<group>"; };
+		2E1F81E21E333F0A00E4B5DE /* simplebinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simplebinary.h; path = "soundtransfer-c/test1/simplebinary.h"; sourceTree = "<group>"; };
+		2E1F81E41E333F5C00E4B5DE /* SoundConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundConvertible.swift; sourceTree = "<group>"; };
 		C39223E81E3337CD00CAA154 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioOutTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39223EA1E333C1100CAA154 /* AudioKit.framework in Frameworks */,
+				2E1F81E61E33431B00E4B5DE /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				2E1F81C01E331C9A00E4B5DE /* AppDelegate.swift */,
+				2E1F81E41E333F5C00E4B5DE /* SoundConvertible.swift */,
 				C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */,
 				2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */,
 				2E1F81C41E331C9A00E4B5DE /* Main.storyboard */,
@@ -95,8 +98,8 @@
 		C3590CBE1E3330DA00303ECD /* soundtransfer-c */ = {
 			isa = PBXGroup;
 			children = (
-				C3590CBF1E3330FF00303ECD /* hello.c */,
-				C3590CC01E3330FF00303ECD /* hello.h */,
+				2E1F81E11E333F0A00E4B5DE /* simplebinary.c */,
+				2E1F81E21E333F0A00E4B5DE /* simplebinary.h */,
 			);
 			name = "soundtransfer-c";
 			sourceTree = "<group>";
@@ -119,7 +122,7 @@
 				2E1F81B91E331C9A00E4B5DE /* Sources */,
 				2E1F81BA1E331C9A00E4B5DE /* Frameworks */,
 				2E1F81BB1E331C9A00E4B5DE /* Resources */,
-				C39223EC1E333C1100CAA154 /* Embed Frameworks */,
+				2E1F81E81E33431B00E4B5DE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,9 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3590CC11E3330FF00303ECD /* hello.c in Sources */,
+				2E1F81E51E333F5C00E4B5DE /* SoundConvertible.swift in Sources */,
 				2E1F81DD1E33289100E4B5DE /* AudioInTestViewController.swift in Sources */,
 				C3A731871E3326B400D09D6E /* AudioOutTestViewController.swift in Sources */,
+				2E1F81E31E333F0A00E4B5DE /* simplebinary.c in Sources */,
 				2E1F81C11E331C9A00E4B5DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
