@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1F81DE1E333B6500E4B5DE /* AudioKit.framework in Frameworks */,
+				C39223EA1E333C1100CAA154 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 				2E1F81B91E331C9A00E4B5DE /* Sources */,
 				2E1F81BA1E331C9A00E4B5DE /* Frameworks */,
 				2E1F81BB1E331C9A00E4B5DE /* Resources */,
-				2E1F81E01E333B6500E4B5DE /* Embed Frameworks */,
+				C39223EC1E333C1100CAA154 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
