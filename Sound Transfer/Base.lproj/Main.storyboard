@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZoZ-YY-RxY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,47 +22,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-O0-RYm">
-                                <rect key="frame" x="150" y="228.5" width="75" height="30"/>
+                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
                                 <state key="normal" title="Play sound"/>
                                 <connections>
-                                    <action selector="playSound" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpQ-Me-SdR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-af-mBv">
-                                <rect key="frame" x="166" y="318.5" width="42" height="30"/>
-                                <state key="normal" title="Listen"/>
-                                <connections>
-                                    <action selector="listen" destination="BYZ-38-t0r" eventType="touchUpInside" id="GvK-1m-83N"/>
+                                    <action selector="toggleSound" destination="BYZ-38-t0r" eventType="touchUpInside" id="DI7-J4-Qm7"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Broadcast freq" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-30-aWv">
-                                <rect key="frame" x="129.5" y="178.5" width="116.5" height="30"/>
+                                <rect key="frame" x="129.5" y="268.5" width="116.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received freq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHv-cJ-mEc">
-                                <rect key="frame" x="134" y="368.5" width="106" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-xI-fOt">
-                                <rect key="frame" x="166" y="409.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3Jy-xI-fOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4sc-d4-JLh"/>
-                            <constraint firstItem="3Jy-xI-fOt" firstAttribute="top" secondItem="jHv-cJ-mEc" secondAttribute="bottom" constant="20" id="Obl-Mp-PiL"/>
-                            <constraint firstItem="jHv-cJ-mEc" firstAttribute="top" secondItem="pPT-af-mBv" secondAttribute="bottom" constant="20" id="PWt-hF-ERs"/>
-                            <constraint firstItem="pPT-af-mBv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QKU-D0-kib"/>
-                            <constraint firstItem="pPT-af-mBv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ypi-Ce-9va"/>
-                            <constraint firstItem="pPT-af-mBv" firstAttribute="top" secondItem="Mqs-O0-RYm" secondAttribute="bottom" constant="60" id="j3f-fU-FSD"/>
-                            <constraint firstItem="jHv-cJ-mEc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kO6-t8-Vby"/>
+                            <constraint firstItem="Mqs-O0-RYm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kDg-Wf-a60"/>
                             <constraint firstItem="Mqs-O0-RYm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nnX-Bc-YCa"/>
                             <constraint firstItem="Mqs-O0-RYm" firstAttribute="top" secondItem="c1I-30-aWv" secondAttribute="bottom" constant="20" id="vhm-qG-a1Y"/>
                             <constraint firstItem="c1I-30-aWv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yiA-pU-gvn"/>
@@ -70,8 +45,6 @@
                     </view>
                     <connections>
                         <outlet property="broadcastField" destination="c1I-30-aWv" id="vdO-hm-FNo"/>
-                        <outlet property="freqInLabel" destination="3Jy-xI-fOt" id="gEc-QH-UFW"/>
-                        <outlet property="listenButton" destination="pPT-af-mBv" id="mDx-66-LX8"/>
                         <outlet property="playButton" destination="Mqs-O0-RYm" id="OFR-1S-y8b"/>
                     </connections>
                 </viewController>
