@@ -28,6 +28,7 @@ extension Data : SoundConvertible {
         }
         
         let count = malloc_size(frequenciesPointer) / 4 //4 = sizeof(int)
+        print(self.bytes)
         var frequencies = [Int]()
         
         for i in 0 ..< count {

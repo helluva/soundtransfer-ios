@@ -33,7 +33,7 @@ class AudioOutTestViewController: UIViewController {
             oscillator.amplitude = 1
             oscillator.start()
             
-            playEncodedAudio(for: "aaaa")
+            playEncodedAudio(for: "SH17")
             
             playButton.setTitle("Stop sound", for: .normal)
         }
