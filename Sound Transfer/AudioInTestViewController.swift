@@ -16,6 +16,9 @@ class AudioInTestViewController : UIViewController {
     
     override func viewDidLoad() {
         
+        initialize() //initialize c code
+        
+        //prepare microphone
         let highPass = AKHighPassFilter(mic, cutoffFrequency: 1000, resonance: 0)
         highPass.start()
         let tracker = AKFrequencyTracker.init(highPass, hopSize: 200, peakCount: 2000)
@@ -23,8 +26,11 @@ class AudioInTestViewController : UIViewController {
         AudioKit.output = tracker
         AudioKit.start()
         
-        Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true, block: { _ in
-            print(tracker.frequency)
+        Timer.scheduledTimer(withTimeInterval: (1.0/35.0), repeats: true, block: { _ in
+            let frequency = tracker.frequency;
+            
+            let cOutput = frame(frequency, nil)
+            print(cOutput)
         })
         
     }

@@ -15,21 +15,11 @@ protocol SoundConvertible {
 extension Data : SoundConvertible {
     
     var frequencies : [Int] {
+        let bytes: UnsafePointer<Int32> = self.withUnsafeBytes { $0 }
         
-        let bytes = self.withUnsafeBytes {
-            [UInt8](UnsafeBufferPointer(start: $0, count: self.count))
-        }
         
-        return bytes.flatMap { byte -> [Int] in
-            let pointer = freq_4_from_input(byte)
-            
-            func byteAt(_ offset: Int) -> Int {
-                return Int(pointer!.advanced(by: offset).pointee)
-            }
-            
-            let frequenciesForByte: [Int] = [byteAt(0), byteAt(1), byteAt(2), byteAt(3)]
-            return frequenciesForByte
-        }
+        return []
+        //freqs_from_input(bytes, bytes.length, output?)
         
     }
     

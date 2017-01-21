@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9DD-Ml-4Cl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jy2-Xg-MdP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,6 +44,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-Qd-ufj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303.19999999999999" y="-530.28485757121439"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Cz-j5-BKB">
+            <objects>
+                <navigationController id="jy2-Xg-MdP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FDB-cV-BdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lCz-ZV-gKA" kind="relationship" relationship="rootViewController" id="FfN-kM-qoe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZE-01-kIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-1265"/>
+        </scene>
+        <!--Sound Chat-->
+        <scene sceneID="Hji-SC-G7P">
+            <objects>
+                <viewController title="Sound Chat" id="lCz-ZV-gKA" customClass="ChatViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7S5-Sz-cnx"/>
+                        <viewControllerLayoutGuide type="bottom" id="10W-Ol-pya"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wOg-qV-F59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u8t-pZ-f2E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o7P-L7-HfV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31d-cu-CCA">
+                                        <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-oZ-5sj">
+                                                <rect key="frame" x="20" y="10" width="335" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="900" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXd-tf-uKQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-cc-SBR">
+                                                        <rect key="frame" x="293" y="0.0" width="42" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="Send"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rbk-oZ-5sj" secondAttribute="trailing" constant="20" id="7KR-Ml-Fml"/>
+                                            <constraint firstItem="rbk-oZ-5sj" firstAttribute="top" secondItem="31d-cu-CCA" secondAttribute="top" constant="10" id="Eh1-RV-cxF"/>
+                                            <constraint firstAttribute="bottom" secondItem="rbk-oZ-5sj" secondAttribute="bottom" constant="10" id="LV5-yj-PCg"/>
+                                            <constraint firstItem="rbk-oZ-5sj" firstAttribute="leading" secondItem="31d-cu-CCA" secondAttribute="leading" constant="20" id="cF6-hf-v4M"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="10W-Ol-pya" firstAttribute="top" secondItem="u8t-pZ-f2E" secondAttribute="bottom" id="2qn-wq-jOj"/>
+                            <constraint firstItem="u8t-pZ-f2E" firstAttribute="leading" secondItem="wOg-qV-F59" secondAttribute="leading" id="E3f-Pb-D26"/>
+                            <constraint firstAttribute="trailing" secondItem="u8t-pZ-f2E" secondAttribute="trailing" id="dUw-Km-zdE"/>
+                            <constraint firstItem="u8t-pZ-f2E" firstAttribute="top" secondItem="7S5-Sz-cnx" secondAttribute="bottom" id="gSm-Yl-jkh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4pd-p5-aVc">
+                        <barButtonItem key="rightBarButtonItem" title="Test VCs" id="hWE-dE-Ngl">
+                            <connections>
+                                <segue destination="9DD-Ml-4Cl" kind="show" id="J7d-yE-sVY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cC-d6-dFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="-1265"/>
         </scene>
         <!--Audio Out Test View Controller-->
         <scene sceneID="tne-QT-ifu">

@@ -43,6 +43,8 @@ class AudioOutTestViewController: UIViewController {
         let frequencies = data.frequencies
         var currentIndex = 0
         
+        print(frequencies)
+        
         Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
             
             if currentIndex >= frequencies.count {
@@ -54,7 +56,7 @@ class AudioOutTestViewController: UIViewController {
             let frequency = frequencies[currentIndex]
             currentIndex += 1
             
-            self.oscillator.frequency = Double(frequency) * 2
+            self.oscillator.frequency = Double(frequency)
             
         })
     }

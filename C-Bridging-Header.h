@@ -6,4 +6,5 @@
 //  Copyright © 2017 Helluva. All rights reserved.
 //
 
-#import "simplebinary.h"
+#import "encode.h"
+#import "decode.h"
