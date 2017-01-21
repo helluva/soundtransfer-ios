@@ -7,51 +7,25 @@
 //
 
 import UIKit
-import AVFoundation
+import AudioKit
 
-let audioQueue = DispatchQueue(label: "Audio Queue")
-
-class AudioInTestViewController : UIViewController, AVCaptureAudioDataOutputSampleBufferDelegate {
+class AudioInTestViewController : UIViewController {
     
-    var session: AVCaptureSession!
+    var mic = AKMicrophone()
+    
     
     override func viewDidLoad() {
-        //subscribe to notifications
-        for notification in [NSNotification.Name.AVCaptureSessionDidStartRunning,
-                             NSNotification.Name.AVCaptureSessionRuntimeError,
-                             NSNotification.Name.AVCaptureSessionDidStopRunning] {
-            NotificationCenter.default.addObserver(forName: notification, object: nil, queue: nil, using: { received in
-                print("\(received.name.rawValue): \(received.userInfo)")
-            })
-        }
-
-        //set up capture session
-        self.session = AVCaptureSession()
-        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeAudio)
         
-        let input = try! AVCaptureDeviceInput(device: device)
-        session?.addInput(input)
+        let tracker = AKFrequencyTracker.init(mic, hopSize: 200, peakCount: 2000)
         
-        let output = AVCaptureAudioDataOutput()
-        output.setSampleBufferDelegate(self, queue: audioQueue)
-        session?.addOutput(output)
+        AudioKit.output = tracker
+        AudioKit.start()
         
-        session?.startRunning()
+        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { _ in
+            print(tracker.frequency)
+        })
+        
     }
     
-    
-    //MARK: - AVCaptureAudioDataOutputSampleBufferDelegate
-    
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        
-        guard let blockBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) else { return }
-        
-        var dataPointer: UnsafeMutablePointer<Int8>? = nil
-        
-        var length = CMBlockBufferGetDataLength(blockBuffer)
-        CMBlockBufferGetDataPointer(blockBuffer, 0, &length, &length, &dataPointer)
-        
-        print(dataPointer!.pointee)
-    }
     
 }
