@@ -14,13 +14,32 @@ protocol SoundConvertible {
 
 extension Data : SoundConvertible {
     
+    var bytes: [Int8] {
+        return self.withUnsafeBytes {
+            [Int8](UnsafeBufferPointer(start: $0, count: self.count))
+        }
+    }
+    
     var frequencies : [Int] {
-        let bytes: UnsafePointer<Int32> = self.withUnsafeBytes { $0 }
+        let bytePointer: UnsafePointer<Int8>! = self.withUnsafeBytes { $0 }
         
+        guard let frequenciesPointer = freqs_from_input(bytePointer, Int32(self.bytes.count)) else {
+            return []
+        }
         
-        return []
-        //freqs_from_input(bytes, bytes.length, output?)
+        let count = malloc_size(frequenciesPointer) / 4 //4 = sizeof(int)
+        var frequencies = [Int]()
         
+        for i in 0 ..< count {
+            let pointer = frequenciesPointer.advanced(by: i)
+            frequencies.append(Int(pointer.pointee))
+        }
+        
+        return frequencies
+    }
+    
+    static func fromPointer(_ pointer: UnsafeMutablePointer<UInt8>) -> Data {
+        return Data(bytes: pointer, count: 4)
     }
     
 }

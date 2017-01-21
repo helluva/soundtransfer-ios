@@ -33,7 +33,7 @@ class AudioOutTestViewController: UIViewController {
             oscillator.amplitude = 1
             oscillator.start()
             
-            playEncodedAudio(for: "GGgg")
+            playEncodedAudio(for: "aaaa")
             
             playButton.setTitle("Stop sound", for: .normal)
         }
@@ -45,7 +45,7 @@ class AudioOutTestViewController: UIViewController {
         
         print(frequencies)
         
-        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
             
             if currentIndex >= frequencies.count {
                 self.toggleSound()
@@ -59,6 +59,10 @@ class AudioOutTestViewController: UIViewController {
             self.oscillator.frequency = Double(frequency)
             
         })
+        
+        timer.fire()
+        
+        
     }
     
 
