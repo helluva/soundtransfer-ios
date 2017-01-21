@@ -12,6 +12,7 @@ import AudioKit
 class AudioInTestViewController : UIViewController {
     
     var mic = AKMicrophone()
+    //var transform = AKFFT
     
     var length: Int32 = 0;
     var dataPointer: UnsafeMutablePointer<UInt8>? = nil
@@ -40,7 +41,6 @@ class AudioInTestViewController : UIViewController {
             } else {
                 print("--")
             }
-            
             
         })
         
