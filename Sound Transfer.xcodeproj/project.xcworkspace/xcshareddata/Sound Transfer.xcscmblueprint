@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9BA3676C41684059966E7A528CBFEDD0349FC372",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "61156D40E188EBC916119A92254296C560F782CA" : 9223372036854775807,
+    "9BA3676C41684059966E7A528CBFEDD0349FC372" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "98CDCA88-960D-484C-909C-4C8F348FB047",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "61156D40E188EBC916119A92254296C560F782CA" : "soundtransfer-c\/",
+    "9BA3676C41684059966E7A528CBFEDD0349FC372" : "soundtransfer-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sound Transfer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sound Transfer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/helluva\/soundtransfer-c",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "61156D40E188EBC916119A92254296C560F782CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/helluva\/soundtransfer-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BA3676C41684059966E7A528CBFEDD0349FC372"
+    }
+  ]
+}

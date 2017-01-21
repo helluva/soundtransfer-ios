@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E1F81C11E331C9A00E4B5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81C01E331C9A00E4B5DE /* AppDelegate.swift */; };
+		2E1F81C31E331C9A00E4B5DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81C21E331C9A00E4B5DE /* ViewController.swift */; };
+		2E1F81C61E331C9A00E4B5DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C41E331C9A00E4B5DE /* Main.storyboard */; };
+		2E1F81C81E331C9A00E4B5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C71E331C9A00E4B5DE /* Assets.xcassets */; };
+		2E1F81CB1E331C9A00E4B5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C91E331C9A00E4B5DE /* LaunchScreen.storyboard */; };
+		2E1F81D91E331F7300E4B5DE /* hello.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81D51E331F7300E4B5DE /* hello.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E1F81BD1E331C9A00E4B5DE /* Sound Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1F81C01E331C9A00E4B5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E1F81C21E331C9A00E4B5DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E1F81C51E331C9A00E4B5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E1F81C71E331C9A00E4B5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E1F81CA1E331C9A00E4B5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E1F81CC1E331C9A00E4B5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1F81D51E331F7300E4B5DE /* hello.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hello.c; sourceTree = "<group>"; };
+		2E1F81D61E331F7300E4B5DE /* hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hello.h; sourceTree = "<group>"; };
+		2E1F81DB1E33212B00E4B5DE /* C-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "C-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E1F81BA1E331C9A00E4B5DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E1F81B41E331C9A00E4B5DE = {
+			isa = PBXGroup;
+			children = (
+				2E1F81DB1E33212B00E4B5DE /* C-Bridging-Header.h */,
+				2E1F81D31E331F7300E4B5DE /* soundtransfer-c */,
+				2E1F81BF1E331C9A00E4B5DE /* Sound Transfer */,
+				2E1F81BE1E331C9A00E4B5DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E1F81BE1E331C9A00E4B5DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E1F81BD1E331C9A00E4B5DE /* Sound Transfer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E1F81BF1E331C9A00E4B5DE /* Sound Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				2E1F81C01E331C9A00E4B5DE /* AppDelegate.swift */,
+				2E1F81C21E331C9A00E4B5DE /* ViewController.swift */,
+				2E1F81C41E331C9A00E4B5DE /* Main.storyboard */,
+				2E1F81C71E331C9A00E4B5DE /* Assets.xcassets */,
+				2E1F81C91E331C9A00E4B5DE /* LaunchScreen.storyboard */,
+				2E1F81CC1E331C9A00E4B5DE /* Info.plist */,
+			);
+			path = "Sound Transfer";
+			sourceTree = "<group>";
+		};
+		2E1F81D31E331F7300E4B5DE /* soundtransfer-c */ = {
+			isa = PBXGroup;
+			children = (
+				2E1F81D51E331F7300E4B5DE /* hello.c */,
+				2E1F81D61E331F7300E4B5DE /* hello.h */,
+			);
+			name = "soundtransfer-c";
+			path = "../soundtransfer-c/Sound Transfer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E1F81BC1E331C9A00E4B5DE /* Sound Transfer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1F81CF1E331C9A00E4B5DE /* Build configuration list for PBXNativeTarget "Sound Transfer" */;
+			buildPhases = (
+				2E1F81B91E331C9A00E4B5DE /* Sources */,
+				2E1F81BA1E331C9A00E4B5DE /* Frameworks */,
+				2E1F81BB1E331C9A00E4B5DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sound Transfer";
+			productName = "Sound Transfer";
+			productReference = 2E1F81BD1E331C9A00E4B5DE /* Sound Transfer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E1F81B51E331C9A00E4B5DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Helluva;
+				TargetAttributes = {
+					2E1F81BC1E331C9A00E4B5DE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FZ89A5SZ7C;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2E1F81B81E331C9A00E4B5DE /* Build configuration list for PBXProject "Sound Transfer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E1F81B41E331C9A00E4B5DE;
+			productRefGroup = 2E1F81BE1E331C9A00E4B5DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E1F81BC1E331C9A00E4B5DE /* Sound Transfer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E1F81BB1E331C9A00E4B5DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1F81CB1E331C9A00E4B5DE /* LaunchScreen.storyboard in Resources */,
+				2E1F81C81E331C9A00E4B5DE /* Assets.xcassets in Resources */,
+				2E1F81C61E331C9A00E4B5DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E1F81B91E331C9A00E4B5DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1F81D91E331F7300E4B5DE /* hello.c in Sources */,
+				2E1F81C31E331C9A00E4B5DE /* ViewController.swift in Sources */,
+				2E1F81C11E331C9A00E4B5DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2E1F81C41E331C9A00E4B5DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E1F81C51E331C9A00E4B5DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E1F81C91E331C9A00E4B5DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E1F81CA1E331C9A00E4B5DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E1F81CD1E331C9A00E4B5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E1F81CE1E331C9A00E4B5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E1F81D01E331C9A00E4B5DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ89A5SZ7C;
+				INFOPLIST_FILE = "Sound Transfer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.helluva.Sound-Transfer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2E1F81D11E331C9A00E4B5DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ89A5SZ7C;
+				INFOPLIST_FILE = "Sound Transfer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.helluva.Sound-Transfer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E1F81B81E331C9A00E4B5DE /* Build configuration list for PBXProject "Sound Transfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1F81CD1E331C9A00E4B5DE /* Debug */,
+				2E1F81CE1E331C9A00E4B5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1F81CF1E331C9A00E4B5DE /* Build configuration list for PBXNativeTarget "Sound Transfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1F81D01E331C9A00E4B5DE /* Debug */,
+				2E1F81D11E331C9A00E4B5DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E1F81B51E331C9A00E4B5DE /* Project object */;
+}

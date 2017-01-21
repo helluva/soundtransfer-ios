@@ -1,0 +1,3 @@
+[submodule "soundtransfer-c"]
+	path = soundtransfer-c
+	url = http://github.com/helluva/soundtransfer-c
