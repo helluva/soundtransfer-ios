@@ -14,10 +14,13 @@ class AudioInTestViewController : UIViewController {
     var mic = AKMicrophone()
     //var transform = AKFFT
     
+    var length: Int32 = 0;
+    var dataPointer: UnsafeMutablePointer<UInt8>? = nil
+    
     
     override func viewDidLoad() {
         
-        //initialize() //initialize c code
+        initialize_decoder(&length, &dataPointer)
         
         //prepare microphone
         let highPass = AKHighPassFilter(mic, cutoffFrequency: 1000, resonance: 0)
@@ -30,8 +33,14 @@ class AudioInTestViewController : UIViewController {
         Timer.scheduledTimer(withTimeInterval: (1.0/35.0), repeats: true, block: { _ in
             let frequency = tracker.frequency;
             
-            //let cOutput = frame(frequency, nil)
-            //print(cOutput)
+            receive_frame(frequency)
+            
+            if let dataPointer = self.dataPointer {
+                print(Data.fromPointer(dataPointer).bytes)
+            } else {
+                print("--")
+            }
+            
         })
         
     }
