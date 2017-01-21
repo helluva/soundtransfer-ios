@@ -9,18 +9,29 @@
 import UIKit
 
 class AudioOutTestViewController: UIViewController {
-
+    
+    @IBOutlet weak var broadcastField: UITextField!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var listenButton: UIButton!
+    @IBOutlet weak var freqInLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func playSound() {
+        if let freq = Int(broadcastField.text!) {
+            
+        } else {
+            
+        }
     }
     
+    @IBAction func listen() {
+    }
 
     /*
     // MARK: - Navigation

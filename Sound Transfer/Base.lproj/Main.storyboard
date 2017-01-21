@@ -25,18 +25,21 @@
                                 <rect key="frame" x="150" y="228.5" width="75" height="30"/>
                                 <state key="normal" title="Play sound"/>
                                 <connections>
-                                    <action selector="playSound" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFS-Jo-vvR"/>
+                                    <action selector="playSound" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpQ-Me-SdR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-af-mBv">
                                 <rect key="frame" x="166" y="318.5" width="42" height="30"/>
                                 <state key="normal" title="Listen"/>
+                                <connections>
+                                    <action selector="listen" destination="BYZ-38-t0r" eventType="touchUpInside" id="GvK-1m-83N"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Broadcast freq" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-30-aWv">
                                 <rect key="frame" x="129.5" y="178.5" width="116.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received freq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHv-cJ-mEc">
                                 <rect key="frame" x="134" y="368.5" width="106" height="21"/>
@@ -66,9 +69,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="broadcastField" destination="c1I-30-aWv" id="ki0-Qo-e9S"/>
-                        <outlet property="listenButton" destination="pPT-af-mBv" id="cw2-nc-tO5"/>
-                        <outlet property="playButton" destination="Mqs-O0-RYm" id="B5m-NM-9uh"/>
+                        <outlet property="broadcastField" destination="c1I-30-aWv" id="vdO-hm-FNo"/>
+                        <outlet property="freqInLabel" destination="3Jy-xI-fOt" id="gEc-QH-UFW"/>
+                        <outlet property="listenButton" destination="pPT-af-mBv" id="mDx-66-LX8"/>
+                        <outlet property="playButton" destination="Mqs-O0-RYm" id="OFR-1S-y8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

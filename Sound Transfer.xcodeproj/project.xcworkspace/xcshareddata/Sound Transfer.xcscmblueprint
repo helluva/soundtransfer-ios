@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "98CDCA88-960D-484C-909C-4C8F348FB047",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "61156D40E188EBC916119A92254296C560F782CA" : "soundtransfer-c\/",
+    "61156D40E188EBC916119A92254296C560F782CA" : "soundtransfer-ios\/soundtransfer-c\/",
     "9BA3676C41684059966E7A528CBFEDD0349FC372" : "soundtransfer-ios\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Sound Transfer",
