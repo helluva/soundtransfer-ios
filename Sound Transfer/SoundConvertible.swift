@@ -23,8 +23,8 @@ extension Data : SoundConvertible {
     var frequencies : [Int] {
         let bytePointer: UnsafePointer<Int8>? = self.withUnsafeBytes { $0 }
         
-        let withoutSeparators = freqs_from_input(bytePointer, Int32(self.bytes.count))
-        let outputFrequencies = separate_repeating_freqs(withoutSeparators, Int32(self.bytes.count) * 2 + 5)
+        let outputFrequencies = freqs_from_input(bytePointer, Int32(self.bytes.count))
+        //let outputFrequencies = separate_repeating_freqs(withoutSeparators, Int32(self.bytes.count) * 2 + 5)
         
         guard let frequenciesPointer = outputFrequencies else {
             return []

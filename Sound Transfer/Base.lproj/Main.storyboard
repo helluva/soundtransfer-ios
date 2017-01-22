@@ -30,7 +30,7 @@
         <!--Sound Chat-->
         <scene sceneID="Hji-SC-G7P">
             <objects>
-                <viewController title="Sound Chat" automaticallyAdjustsScrollViewInsets="NO" id="lCz-ZV-gKA" customClass="ChatViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sound Chat" automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="lCz-ZV-gKA" customClass="ChatViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7S5-Sz-cnx"/>
                         <viewControllerLayoutGuide type="bottom" id="10W-Ol-pya"/>
@@ -53,9 +53,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Nz-qRL">
-                                                            <rect key="frame" x="347" y="20" width="0.0" height="0.0"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Nz-qRL">
+                                                            <rect key="frame" x="20" y="20" width="327" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -63,6 +63,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailingMargin" secondItem="bJa-Nz-qRL" secondAttribute="trailing" constant="20" id="Omu-ek-uqj"/>
                                                         <constraint firstItem="bJa-Nz-qRL" firstAttribute="centerY" secondItem="Ypb-nd-AvX" secondAttribute="centerY" id="S6y-5R-wRn"/>
+                                                        <constraint firstItem="bJa-Nz-qRL" firstAttribute="leading" secondItem="Ypb-nd-AvX" secondAttribute="leading" constant="20" id="xCM-X4-FO5"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -143,7 +144,7 @@
         <!--Pixel Art View Controller-->
         <scene sceneID="bcg-HQ-6dZ">
             <objects>
-                <viewController id="X1y-lH-JVz" customClass="PixelArtViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pixelArt" modalPresentationStyle="currentContext" id="X1y-lH-JVz" customClass="PixelArtViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bKZ-2s-k0Z"/>
                         <viewControllerLayoutGuide type="bottom" id="1CE-gm-RUH"/>
@@ -153,300 +154,300 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="m3e-DM-3l4">
-                                <rect key="frame" x="16" y="114" width="343" height="343"/>
+                                <rect key="frame" x="18" y="114" width="339" height="339"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Cvp-FK-4vv" userLabel="0">
-                                        <rect key="frame" x="0.0" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PK5-7A-e7L" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770833337" green="0.89754231770833337" blue="0.89754231770833337" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndf-5C-Zrg" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-c9-axK" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsE-Vj-YsM" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAI-YX-beD" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLe-Hz-nqn" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-x9-fi8" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iR1-gt-EJf" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Yno-fw-ZkK" userLabel="0">
-                                        <rect key="frame" x="43" y="0.0" width="41.5" height="343"/>
+                                        <rect key="frame" x="42.5" y="0.0" width="41" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJR-9k-LyN" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQp-Tc-AJx" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="41" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K95-uQ-yUW" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9N-i0-CWB" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMh-Hn-xa3" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb7-Eh-Gqe" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="41" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZv-IX-VXe" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lT-ff-GsY" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-Pi-RCN" userLabel="0">
-                                        <rect key="frame" x="86.5" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="85.5" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpl-uT-jve" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-8z-xG4" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-HW-OVj" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5h-T6-bvH" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eja-hw-nFD" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUZ-Vg-lMD" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYE-mJ-N7c" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpU-T9-QO9" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Ys-Xm-zQF" userLabel="0">
-                                        <rect key="frame" x="129.5" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="128" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xk9-b8-9Di" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2L-M0-IXv" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foG-qs-uAr" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwZ-TB-KdO" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpp-Uw-FJH" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-aG-Tcm" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-80-9lo" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpX-sv-yn7" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dzU-4c-YoF" userLabel="0">
-                                        <rect key="frame" x="172.5" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="170.5" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYA-Yc-mUY" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTk-sp-PQ3" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgH-Yq-FJM" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-62-6h3" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-hO-qNn" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLz-ZH-y63" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgJ-BL-cFS" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6v-Pk-sf2" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5sb-HA-y66" userLabel="0">
-                                        <rect key="frame" x="215.5" y="0.0" width="41.5" height="343"/>
+                                        <rect key="frame" x="213" y="0.0" width="41" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-bF-gr1" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xn-le-KtO" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="41" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHE-vE-Svs" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9P-0j-pjR" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-LM-TCN" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neA-gQ-BOG" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41.5" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="41" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTT-UD-n3z" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-Ps-mNj" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="41" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="n56-yE-Err" userLabel="0">
-                                        <rect key="frame" x="259" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="256" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYL-n1-gyd" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-b0-oPS" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-dy-oz4" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHi-iw-W7q" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-bf-CGo" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-BK-jS9" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-h0-zoi" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RZ-DV-n6L" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vGr-Lq-U8j" userLabel="0">
-                                        <rect key="frame" x="302" y="0.0" width="41" height="343"/>
+                                        <rect key="frame" x="298.5" y="0.0" width="40.5" height="339"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-CC-PfU" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-qR-55N" userLabel="1">
-                                                <rect key="frame" x="0.0" y="43" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYC-dK-6LR" userLabel="2">
-                                                <rect key="frame" x="0.0" y="86.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-Cs-fZf" userLabel="3">
-                                                <rect key="frame" x="0.0" y="129.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="128" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-44-TAl" userLabel="4">
-                                                <rect key="frame" x="0.0" y="172.5" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="170.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGx-jD-JLd" userLabel="5">
-                                                <rect key="frame" x="0.0" y="215.5" width="41" height="41.5"/>
+                                                <rect key="frame" x="0.0" y="213" width="40.5" height="41"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-GN-cZo" userLabel="6">
-                                                <rect key="frame" x="0.0" y="259" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="256" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-jf-yOa" userLabel="7">
-                                                <rect key="frame" x="0.0" y="302" width="41" height="41"/>
+                                                <rect key="frame" x="0.0" y="298.5" width="40.5" height="40.5"/>
                                                 <color key="backgroundColor" red="0.89754231770000004" green="0.89754231770000004" blue="0.89754231770000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
@@ -457,20 +458,20 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-WE-KRh">
-                                <rect key="frame" x="0.0" y="457" width="375" height="166"/>
+                                <rect key="frame" x="0.0" y="473" width="375" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3yw-y2-yR7">
-                                        <rect key="frame" x="30" y="52" width="315" height="63.5"/>
+                                        <rect key="frame" x="30" y="43" width="315" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjS-6r-jL1">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="63.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="selectColor:" destination="X1y-lH-JVz" eventType="touchUpInside" id="VXC-B4-vJw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVx-LB-SgC">
-                                                <rect key="frame" x="84" y="0.0" width="63.5" height="63.5"/>
+                                                <rect key="frame" x="84" y="0.0" width="63.5" height="64"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.016666666666666607" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gVx-LB-SgC" secondAttribute="height" multiplier="1:1" id="Tds-do-dKg"/>
@@ -480,14 +481,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlK-py-OY5">
-                                                <rect key="frame" x="167.5" y="0.0" width="64" height="63.5"/>
+                                                <rect key="frame" x="167.5" y="0.0" width="64" height="64"/>
                                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="selectColor:" destination="X1y-lH-JVz" eventType="touchUpInside" id="xwJ-t4-2MW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axZ-q2-5Vq">
-                                                <rect key="frame" x="251.5" y="0.0" width="63.5" height="63.5"/>
+                                                <rect key="frame" x="251.5" y="0.0" width="63.5" height="64"/>
                                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="selectColor:" destination="X1y-lH-JVz" eventType="touchUpInside" id="TMg-8H-rfh"/>
@@ -498,19 +499,25 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="3yw-y2-yR7" secondAttribute="trailing" constant="30" id="DXD-pH-vcg"/>
-                                    <constraint firstItem="3yw-y2-yR7" firstAttribute="leading" secondItem="2WS-WE-KRh" secondAttribute="leading" constant="30" id="Lb1-aI-Oso"/>
+                                    <constraint firstAttribute="bottom" secondItem="3yw-y2-yR7" secondAttribute="bottom" priority="900" constant="10" id="Cs6-jA-V5f"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3yw-y2-yR7" secondAttribute="trailing" constant="30" id="DXD-pH-vcg"/>
+                                    <constraint firstItem="3yw-y2-yR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2WS-WE-KRh" secondAttribute="leading" constant="30" id="Lb1-aI-Oso"/>
                                     <constraint firstItem="3yw-y2-yR7" firstAttribute="centerY" secondItem="2WS-WE-KRh" secondAttribute="centerY" id="ONc-bR-aMh"/>
+                                    <constraint firstItem="3yw-y2-yR7" firstAttribute="top" secondItem="2WS-WE-KRh" secondAttribute="top" priority="900" constant="10" id="QBY-hc-iUn"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3yw-y2-yR7" secondAttribute="bottom" constant="10" id="UVF-fz-VVK"/>
+                                    <constraint firstItem="3yw-y2-yR7" firstAttribute="centerX" secondItem="2WS-WE-KRh" secondAttribute="centerX" id="gQb-I9-UO5"/>
+                                    <constraint firstItem="3yw-y2-yR7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2WS-WE-KRh" secondAttribute="top" constant="10" id="k2y-hM-MsA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="w27-he-TTY"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m3e-DM-3l4" firstAttribute="top" secondItem="bKZ-2s-k0Z" secondAttribute="bottom" constant="50" id="2r0-66-brF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m3e-DM-3l4" secondAttribute="trailing" id="7yZ-bx-Tv5"/>
-                            <constraint firstItem="2WS-WE-KRh" firstAttribute="top" secondItem="m3e-DM-3l4" secondAttribute="bottom" id="BYg-hx-mmo"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="m3e-DM-3l4" secondAttribute="trailing" id="7yZ-bx-Tv5"/>
+                            <constraint firstItem="2WS-WE-KRh" firstAttribute="top" secondItem="m3e-DM-3l4" secondAttribute="bottom" constant="20" id="BYg-hx-mmo"/>
                             <constraint firstItem="1CE-gm-RUH" firstAttribute="top" secondItem="2WS-WE-KRh" secondAttribute="bottom" id="J7H-WO-xp9"/>
-                            <constraint firstItem="m3e-DM-3l4" firstAttribute="leading" secondItem="lJR-ZZ-7HK" secondAttribute="leadingMargin" id="Nl9-m9-g7n"/>
+                            <constraint firstItem="m3e-DM-3l4" firstAttribute="leading" secondItem="lJR-ZZ-7HK" secondAttribute="leadingMargin" priority="500" id="Nl9-m9-g7n"/>
                             <constraint firstItem="2WS-WE-KRh" firstAttribute="leading" secondItem="lJR-ZZ-7HK" secondAttribute="leading" id="ZBr-zs-ZRF"/>
                             <constraint firstItem="m3e-DM-3l4" firstAttribute="centerX" secondItem="lJR-ZZ-7HK" secondAttribute="centerX" id="ZQ6-GA-82Q"/>
                             <constraint firstAttribute="trailing" secondItem="2WS-WE-KRh" secondAttribute="trailing" id="q9Q-6m-2kk"/>
@@ -528,6 +535,7 @@
                     <connections>
                         <outlet property="colorPicker" destination="3yw-y2-yR7" id="lb7-01-bPy"/>
                         <outlet property="pixels" destination="m3e-DM-3l4" id="HpW-zn-Dag"/>
+                        <outlet property="redColorButton" destination="gVx-LB-SgC" id="N0w-S5-WBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uV-jt-BIf" userLabel="First Responder" sceneMemberID="firstResponder"/>

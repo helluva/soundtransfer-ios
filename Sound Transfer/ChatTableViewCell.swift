@@ -12,8 +12,9 @@ class ChatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var messageLabel: UILabel!
     
-    func setLabel(_ customText: String) {
-        messageLabel.text = customText
+    func setLabel(_ customText: (originatedFromThisDevice: Bool, message: String)) {
+        messageLabel.text = customText.message
+        messageLabel.textAlignment = customText.originatedFromThisDevice ? .right : .left
     }
 
 }

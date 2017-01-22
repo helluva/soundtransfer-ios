@@ -13,11 +13,13 @@ class PixelArtViewController : UIViewController {
     @IBOutlet weak var pixels: UIStackView!
     @IBOutlet weak var colorPicker: UIStackView!
     
+    @IBOutlet weak var redColorButton: UIButton!
     
+    var chatViewController: ChatViewController?
     
     
     override func viewDidLoad() {
-        self.selectColor(self.currentColorButton)
+        self.selectColor(self.redColorButton)
     }
     
     
@@ -54,13 +56,14 @@ class PixelArtViewController : UIViewController {
     
     var currentColorIndex = 1
     
-    var currentColorButton: UIView {
-        return colorPicker.arrangedSubviews.first(where: { $0.tag == currentColorIndex })!
+    var currentColor: UIColor {
+        return colorForIndex(self.currentColorIndex)
     }
     
-    var currentColor: UIColor {
-        return currentColorButton.backgroundColor!
+    func colorForIndex(_ index: Int) -> UIColor {
+        return colorPicker.arrangedSubviews.first(where: { $0.tag == index })!.backgroundColor!
     }
+    
     
     @IBAction func selectColor(_ sender: UIView) {
         
@@ -103,14 +106,80 @@ class PixelArtViewController : UIViewController {
         
         var frequencies = [Int]()
         
-        for i in 0 ..< (count / 4) {
+        for i in 0 ..< (malloc_size(frequenciesPointer) / 4) {
             let pointer = frequenciesPointer.advanced(by: i)
             frequencies.append(Int(pointer.pointee))
         }
         
         print(frequencies)
         
+        
+        //_ = self.navigationController?.popViewController(animated: true)
+        self.chatViewController?.sendFrequencies(frequencies, contentForTable: "image")
     }
+    
+    
+    //MARK: - Input
+    
+    static func presentForInput(from source: UIViewController) -> PixelArtViewController {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pixelArt") as! PixelArtViewController
+        source.navigationController?.pushViewController(controller, animated: true)
+        
+        return controller
+    }
+    
+    func displayBytes(_ bytes: [Int]) {
+        
+        var allColors = [Int]()
+        
+        for byte in bytes {
+            guard let colorsPointer = process_colors(UInt8(byte)) else { continue }
+            
+            func colorValue(at offset: Int) -> Int {
+                let pointer = colorsPointer.advanced(by: offset)
+                return Int(pointer.pointee)
+            }
+            
+            for i in 0...3 {
+                allColors.append(colorValue(at: i))
+            }
+        }
+        
+        displayColors(allColors)
+    }
+    
+    func displayColors(_ colors: [Int]) {
+        
+        var row = 0
+        var col = 0
+        
+        for colorIndex in colors {
+            
+            if col > 7 || row > 7 { continue }
+            
+            if let verticalStackView = self.pixels.arrangedSubviews[col] as? UIStackView {
+                let view = verticalStackView.arrangedSubviews[row]
+                print("\(row), \(col): \(colorIndex)")
+                view.backgroundColor = self.colorForIndex(colorIndex)
+            }
+            
+            row += 1
+            
+            if row == 8 {
+                row = 0
+                col += 1
+            }
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
 }
