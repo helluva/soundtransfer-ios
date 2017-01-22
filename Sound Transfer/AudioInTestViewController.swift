@@ -11,19 +11,19 @@ import AudioKit
 
 class AudioInTestViewController : UIViewController {
     
-    var mic = AKMicrophone()
-    //var transform = AKFFT
+    var mic: AKMicrophone!
     
     var length: Int32 = 0;
     var dataPointer: UnsafeMutablePointer<UInt8>? = nil
     
     
-    override func viewDidLoad() {
+    override func viewDidAppear(_ animated: Bool) {
         
         initialize_decoder(&length, &dataPointer)
         
         //prepare microphone
-        let tracker = AKFrequencyTracker(mic, hopSize: 128, peakCount: 20)
+        mic = AKMicrophone()
+        let tracker = AKFrequencyTracker(mic, hopSize: 20, peakCount: 2000)
         
         AudioKit.output = tracker
         AudioKit.start()
@@ -36,10 +36,18 @@ class AudioInTestViewController : UIViewController {
             receive_frame(frequency)
             
             if let dataPointer = self.dataPointer {
-                let received = String(data: Data.fromPointer(dataPointer), encoding: .utf8)
-                print(received)
+                let data = Data(bytes: dataPointer, count: Int(self.length) / 4)
+                //print(data.bytes)
+                
+                let characters = data.bytes.map({ byte -> String in
+                    let char = Data(bytes: [byte])
+                    return String(data: char, encoding: .utf8) ?? "_"
+                })
+
+                //print(characters)
+                
             } else {
-                print("--")
+                //print("--")
             }
             
         })

@@ -74,20 +74,21 @@ class ChatViewController : UIViewController, UITableViewDataSource {
         
         Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
             
-            let frequency = frequencies[currentIndex]
-            self.oscillator.frequency = Double(frequency)
-            if currentIndex == 0 {
-                self.oscillator.start()
-            }
-            
             if currentIndex >= frequencies.count {
                 timer.invalidate()
                 self.oscillator.stop()
                 return
             }
             
+            let frequency = frequencies[currentIndex]
+            self.oscillator.frequency = Double(frequency)
+            if currentIndex == 0 {
+                self.oscillator.start()
+            }
+            
             currentIndex += 1
         })
+        
         previousMessages.append(message)
     }
 }

@@ -13,26 +13,26 @@
 		2E1F81CB1E331C9A00E4B5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1F81C91E331C9A00E4B5DE /* LaunchScreen.storyboard */; };
 		2E1F81DD1E33289100E4B5DE /* AudioInTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */; };
 		2E1F81E51E333F5C00E4B5DE /* SoundConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81E41E333F5C00E4B5DE /* SoundConvertible.swift */; };
-		2E1F81E61E33431B00E4B5DE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; };
-		2E1F81E71E33431B00E4B5DE /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2E1F81F51E33CC2500E4B5DE /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81F11E33CC2500E4B5DE /* encode.c */; };
 		2E1F81F71E33D21800E4B5DE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81F61E33D21800E4B5DE /* ChatViewController.swift */; };
 		2E1F82051E33F8AD00E4B5DE /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F81FF1E33F8AD00E4B5DE /* decode.c */; };
 		2E1F82061E33F8AD00E4B5DE /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F82011E33F8AD00E4B5DE /* encode.c */; };
 		2E1F82071E33F8AD00E4B5DE /* globals.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E1F82031E33F8AD00E4B5DE /* globals.c */; };
+		2E6EC19D1E342436002C86FD /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; };
+		2E6EC19E1E342436002C86FD /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39223E81E3337CD00CAA154 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2EF0C6931E341FBD00F9B224 /* PixelArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0C6921E341FBD00F9B224 /* PixelArtViewController.swift */; };
 		C3A731871E3326B400D09D6E /* AudioOutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */; };
 		C3F930A31E33F1C200F30798 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F930A21E33F1C200F30798 /* UIViewController.swift */; };
 		C3F930A51E340AEB00F30798 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F930A41E340AEB00F30798 /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E1F81E81E33431B00E4B5DE /* Embed Frameworks */ = {
+		2E6EC19F1E342436002C86FD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E1F81E71E33431B00E4B5DE /* AudioKit.framework in Embed Frameworks */,
+				2E6EC19E1E342436002C86FD /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,8 +49,6 @@
 		2E1F81DB1E33212B00E4B5DE /* C-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "C-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioInTestViewController.swift; sourceTree = "<group>"; };
 		2E1F81E41E333F5C00E4B5DE /* SoundConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundConvertible.swift; sourceTree = "<group>"; };
-		2E1F81F11E33CC2500E4B5DE /* encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encode.c; path = "soundtransfer-c/Sound Transfer/encode.c"; sourceTree = "<group>"; };
-		2E1F81F21E33CC2500E4B5DE /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encode.h; path = "soundtransfer-c/Sound Transfer/encode.h"; sourceTree = "<group>"; };
 		2E1F81F61E33D21800E4B5DE /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2E1F81FF1E33F8AD00E4B5DE /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = "soundtransfer-c/Sound Transfer/decode.c"; sourceTree = "<group>"; };
 		2E1F82001E33F8AD00E4B5DE /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = "soundtransfer-c/Sound Transfer/decode.h"; sourceTree = "<group>"; };
@@ -58,6 +56,7 @@
 		2E1F82021E33F8AD00E4B5DE /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encode.h; path = "soundtransfer-c/Sound Transfer/encode.h"; sourceTree = "<group>"; };
 		2E1F82031E33F8AD00E4B5DE /* globals.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = globals.c; path = "soundtransfer-c/Sound Transfer/globals.c"; sourceTree = "<group>"; };
 		2E1F82041E33F8AD00E4B5DE /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = globals.h; path = "soundtransfer-c/Sound Transfer/globals.h"; sourceTree = "<group>"; };
+		2EF0C6921E341FBD00F9B224 /* PixelArtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelArtViewController.swift; sourceTree = "<group>"; };
 		C39223E81E3337CD00CAA154 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioOutTestViewController.swift; sourceTree = "<group>"; };
 		C3F930A21E33F1C200F30798 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1F81E61E33431B00E4B5DE /* AudioKit.framework in Frameworks */,
+				2E6EC19D1E342436002C86FD /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +103,7 @@
 				C3F930A41E340AEB00F30798 /* ChatTableViewCell.swift */,
 				C3A731861E3326B400D09D6E /* AudioOutTestViewController.swift */,
 				2E1F81DC1E33289100E4B5DE /* AudioInTestViewController.swift */,
+				2EF0C6921E341FBD00F9B224 /* PixelArtViewController.swift */,
 				2E1F81C41E331C9A00E4B5DE /* Main.storyboard */,
 				C3F930A21E33F1C200F30798 /* UIViewController.swift */,
 				2E1F81C71E331C9A00E4B5DE /* Assets.xcassets */,
@@ -116,14 +116,12 @@
 		C3590CBE1E3330DA00303ECD /* soundtransfer-c */ = {
 			isa = PBXGroup;
 			children = (
-
 				2E1F81FF1E33F8AD00E4B5DE /* decode.c */,
 				2E1F82001E33F8AD00E4B5DE /* decode.h */,
 				2E1F82011E33F8AD00E4B5DE /* encode.c */,
 				2E1F82021E33F8AD00E4B5DE /* encode.h */,
 				2E1F82031E33F8AD00E4B5DE /* globals.c */,
 				2E1F82041E33F8AD00E4B5DE /* globals.h */,
-
 			);
 			name = "soundtransfer-c";
 			sourceTree = "<group>";
@@ -146,7 +144,7 @@
 				2E1F81B91E331C9A00E4B5DE /* Sources */,
 				2E1F81BA1E331C9A00E4B5DE /* Frameworks */,
 				2E1F81BB1E331C9A00E4B5DE /* Resources */,
-				2E1F81E81E33431B00E4B5DE /* Embed Frameworks */,
+				2E6EC19F1E342436002C86FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +216,7 @@
 				2E1F81F71E33D21800E4B5DE /* ChatViewController.swift in Sources */,
 				C3F930A51E340AEB00F30798 /* ChatTableViewCell.swift in Sources */,
 				C3A731871E3326B400D09D6E /* AudioOutTestViewController.swift in Sources */,
+				2EF0C6931E341FBD00F9B224 /* PixelArtViewController.swift in Sources */,
 				2E1F82071E33F8AD00E4B5DE /* globals.c in Sources */,
 				2E1F81C11E331C9A00E4B5DE /* AppDelegate.swift in Sources */,
 			);
