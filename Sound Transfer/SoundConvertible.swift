@@ -14,9 +14,9 @@ protocol SoundConvertible {
 
 extension Data : SoundConvertible {
     
-    var bytes: [Int8] {
+    var bytes: [UInt8] {
         return self.withUnsafeBytes {
-            [Int8](UnsafeBufferPointer(start: $0, count: self.count))
+            [UInt8](UnsafeBufferPointer(start: $0, count: self.count))
         }
     }
     
@@ -28,6 +28,7 @@ extension Data : SoundConvertible {
         }
         
         let count = malloc_size(frequenciesPointer) / 4 //4 = sizeof(int)
+        print(self.bytes)
         var frequencies = [Int]()
         
         for i in 0 ..< count {
@@ -36,10 +37,6 @@ extension Data : SoundConvertible {
         }
         
         return frequencies
-    }
-    
-    static func fromPointer(_ pointer: UnsafeMutablePointer<UInt8>) -> Data {
-        return Data(bytes: pointer, count: 4)
     }
     
 }
