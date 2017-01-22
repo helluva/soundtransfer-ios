@@ -32,6 +32,11 @@ class ChatViewController : UIViewController, UITableViewDataSource {
         AudioKit.start()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        AudioKit.stop()
+        self.oscillator.stop()
+    }
+    
     func addKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -72,7 +77,7 @@ class ChatViewController : UIViewController, UITableViewDataSource {
         
         print(frequencies)
         
-        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { timer in
             
             if currentIndex >= frequencies.count {
                 timer.invalidate()

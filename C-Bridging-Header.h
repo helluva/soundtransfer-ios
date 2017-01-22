@@ -8,3 +8,4 @@
 
 #import "decode.h"
 #import "encode.h"
+#import "globals.h"

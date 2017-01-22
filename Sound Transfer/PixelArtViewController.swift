@@ -42,6 +42,7 @@ class PixelArtViewController : UIViewController {
                 let locationInPixel = self.view.convert(locationInView, to: pixel)
                 if pixel.bounds.contains(locationInPixel) {
                     pixel.backgroundColor = self.currentColor
+                    pixel.tag = self.currentColorIndex
                 }
                 
             }
@@ -78,6 +79,36 @@ class PixelArtViewController : UIViewController {
             }, completion: nil)
             
         }
+        
+    }
+    
+    
+    //MARK : - Output
+    
+    @IBAction func sendPressed(_ sender: Any) {
+        
+        let count = 8*8
+        let flatColors = UnsafeMutablePointer<Int8>.allocate(capacity: count)
+        var currentIndex = 0
+        
+        for subview in self.pixels.arrangedSubviews {
+            for pixel in (subview as? UIStackView)?.arrangedSubviews ?? [] {
+                flatColors.advanced(by: currentIndex).pointee = Int8(pixel.tag)
+                print("\(pixel.tag), ", separator: "", terminator: "")
+                currentIndex += 1
+            }
+        }
+        
+        guard let frequenciesPointer = freqs_from_color(flatColors, Int32(count)) else { return }
+        
+        var frequencies = [Int]()
+        
+        for i in 0 ..< (count / 4) {
+            let pointer = frequenciesPointer.advanced(by: i)
+            frequencies.append(Int(pointer.pointee))
+        }
+        
+        print(frequencies)
         
     }
     

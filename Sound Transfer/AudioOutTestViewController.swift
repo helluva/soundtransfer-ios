@@ -18,7 +18,7 @@ class AudioOutTestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         oscillator.amplitude = 1
         AudioKit.output = oscillator
         AudioKit.start()
@@ -50,7 +50,7 @@ class AudioOutTestViewController: UIViewController {
         
         print(frequencies)
         
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true, block: { timer in
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
             
             if currentIndex >= frequencies.count {
                 self.toggleSound()
