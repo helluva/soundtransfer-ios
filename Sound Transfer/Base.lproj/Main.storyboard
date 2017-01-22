@@ -65,7 +65,7 @@
         <!--Sound Chat-->
         <scene sceneID="Hji-SC-G7P">
             <objects>
-                <viewController title="Sound Chat" id="lCz-ZV-gKA" customClass="ChatViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sound Chat" automaticallyAdjustsScrollViewInsets="NO" id="lCz-ZV-gKA" customClass="ChatViewController" customModule="Sound_Transfer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7S5-Sz-cnx"/>
                         <viewControllerLayoutGuide type="bottom" id="10W-Ol-pya"/>
@@ -81,15 +81,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="55" id="hsg-VS-Oxg" customClass="ChatTableViewCell" customModule="Sound_Transfer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="40" id="hsg-VS-Oxg" customClass="ChatTableViewCell" customModule="Sound_Transfer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsg-VS-Oxg" id="Ypb-nd-AvX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Nz-qRL">
-                                                            <rect key="frame" x="347" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="347" y="20" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -112,18 +112,21 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31d-cu-CCA">
                                         <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-oZ-5sj">
-                                                <rect key="frame" x="20" y="10" width="335" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-oZ-5sj">
+                                                <rect key="frame" x="20" y="10" width="345" height="50"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MBy-oB-3ZX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="lCz-ZV-gKA" id="upt-7C-jyM"/>
+                                                        </connections>
                                                     </textView>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-cc-SBR">
-                                                        <rect key="frame" x="293" y="0.0" width="42" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-cc-SBR">
+                                                        <rect key="frame" x="303" y="0.0" width="42" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Send"/>
                                                         <connections>
                                                             <action selector="sendMessage" destination="lCz-ZV-gKA" eventType="touchUpInside" id="Skz-ho-IGM"/>
@@ -134,7 +137,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="rbk-oZ-5sj" secondAttribute="trailing" constant="20" id="7KR-Ml-Fml"/>
+                                            <constraint firstAttribute="trailing" secondItem="rbk-oZ-5sj" secondAttribute="trailing" constant="10" id="7KR-Ml-Fml"/>
                                             <constraint firstItem="rbk-oZ-5sj" firstAttribute="top" secondItem="31d-cu-CCA" secondAttribute="top" constant="10" id="Eh1-RV-cxF"/>
                                             <constraint firstAttribute="bottom" secondItem="rbk-oZ-5sj" secondAttribute="bottom" constant="10" id="LV5-yj-PCg"/>
                                             <constraint firstItem="rbk-oZ-5sj" firstAttribute="leading" secondItem="31d-cu-CCA" secondAttribute="leading" constant="20" id="cF6-hf-v4M"/>
@@ -164,6 +167,8 @@
                     <connections>
                         <outlet property="bottomAnchor" destination="LV5-yj-PCg" id="ILf-PS-Fz6"/>
                         <outlet property="messageField" destination="MBy-oB-3ZX" id="2FL-CX-7NF"/>
+                        <outlet property="messageTableView" destination="o7P-L7-HfV" id="IiL-ux-UUR"/>
+                        <outlet property="sendButton" destination="YsT-cc-SBR" id="iqT-54-Sbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cC-d6-dFO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -21,7 +21,7 @@ extension Data : SoundConvertible {
     }
     
     var frequencies : [Int] {
-        let bytePointer: UnsafePointer<Int8>! = self.withUnsafeBytes { $0 }
+        let bytePointer: UnsafePointer<Int8>? = self.withUnsafeBytes { $0 }
         
         guard let frequenciesPointer = freqs_from_input(bytePointer, Int32(self.bytes.count)) else {
             return []
