@@ -201,11 +201,18 @@ class ChatViewController : UIViewController, UITableViewDataSource, UITextViewDe
         
         print(frequencies)
         
+        let noteDict: [String: Int] = ["C6": 1046, "C#6": 1108, "D6": 1174, "D#6": 1244, "E6": 1318, "F6": 1396, "F#6": 1480, "G6": 1568, "G#6": 1661, "A6": 1760, "A#6": 1864, "B6": 1975, "C7": 2093, "C#7": 2217, "D7": 2349, "D#7": 2489, "E7": 2637, "F7": 2794, "E8": 5274, "N": 0]
+        
         if message == "For Elise" {
             
             let noteFrequencies = ["E7", "D#7", "E7", "D#7", "E7", "B6", "D7", "C7", "A6", "A6", "A6", "C6", "E6", "A6", "B6", "B6", "B6", "E6", "G#6", "B6", "C7", "C7", "C7", "E6", "E7", "D#7", "E7", "D#7", "E7", "B6", "D7", "C7", "A6", "A6", "A6", "C6", "E6", "A6", "B6", "B6", "B6", "E6", "C7", "B6", "A6", "A6", "A6", "B6", "C7", "D7", "E7", "E7", "E7", "G6", "F7", "E7", "D7", "D7", "D7", "F6", "E7", "D7", "C7", "C7", "C7", "E6", "D7", "C7", "B6", "B6", "B6", "E6", "E6", "E7", "E6", "E7", "E7", "E8", "D#7", "E7", "D#7", "E7", "D#7", "E7", "D#7", "E7", "D#7", "E7", "D#7", "E7", "B6", "D7", "C7", "A6", "A6", "A6", "C6", "E6", "A6", "B6", "B6", "B6", "E6", "C7", "B6", "A6", "A6", "A6"]
             
-                let noteDict: [String: Int] = ["C6": 1046, "C#6": 1108, "D6": 1174, "D#6": 1244, "E6": 1318, "F6": 1396, "F#6": 1480, "G6": 1568, "G#6": 1661, "A6": 1760, "A#6": 1864, "B6": 1975, "C7": 2093, "C#7": 2217, "D7": 2349, "D#7": 2489, "E7": 2637, "F7": 2794, "E8": 5274, "N": 0]
+            frequencies = []
+            for note in noteFrequencies {
+                frequencies.append(noteDict[note]! as Int)
+            }
+        } else if message == "Mario" {
+            let noteFrequencies = ["E7", "E7", "N", "E7", "N", "C7", "E7", "N", "G7", "N", "N", "N", "G6", "N", "N", "N", "C7", "N", "N", "G6", "N", "N", "E6", "N", "N", "A6", "N", "B6", "N", "A#6", "A6", "G6", "E7", "G7", "A7", "N", "F7", "G7", "N", "E7", "N", "C7", "D7", "B6"]
             
             frequencies = []
             for note in noteFrequencies {
