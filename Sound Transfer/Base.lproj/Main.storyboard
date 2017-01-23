@@ -42,20 +42,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u8t-pZ-f2E">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o7P-L7-HfV">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o7P-L7-HfV">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="40" id="hsg-VS-Oxg" customClass="ChatTableViewCell" customModule="Sound_Transfer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="95" id="hsg-VS-Oxg" customClass="ChatTableViewCell" customModule="Sound_Transfer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsg-VS-Oxg" id="Ypb-nd-AvX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Nz-qRL">
-                                                            <rect key="frame" x="20" y="20" width="327" height="0.0"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Nz-qRL">
+                                                            <rect key="frame" x="20" y="47.5" width="327" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -124,7 +124,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4pd-p5-aVc">
-                        <barButtonItem key="leftBarButtonItem" title="Image" id="Udd-b4-E17">
+                        <barButtonItem key="rightBarButtonItem" title="Send Image" id="Udd-b4-E17">
                             <connections>
                                 <segue destination="X1y-lH-JVz" kind="show" id="SVp-Dw-5YQ"/>
                             </connections>

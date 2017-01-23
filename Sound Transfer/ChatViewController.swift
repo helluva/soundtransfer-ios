@@ -93,7 +93,7 @@ class ChatViewController : UIViewController, UITableViewDataSource, UITextViewDe
         let lastIndex = previousMessages.count - 1
         let indexPath = IndexPath(item: lastIndex, section: 0)
         if lastIndex > 0 {
-            messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         }
     }
     
@@ -125,13 +125,14 @@ class ChatViewController : UIViewController, UITableViewDataSource, UITextViewDe
             let frequency = tracker.frequency;
             let status = receive_frame(frequency)
             
+            print("status: \(status)    pointer: \(self.dataPointer)")
             
             if let dataPointer = self.dataPointer, status == -2 || status == -5 {
                 
                 
-                //IMAGE! I LOVE MAGIC NUMBERS!!!!! (32 + 5) * 2
+                //IMAGE! I LOVE MAGIC NUMBERS!!!!!
                 print("length: \(self.length)")
-                if self.length == 42 {
+                if self.length == 32 {
                     
                     if let pixelArtController = self.pixelArtController {
                         let byteCount = Int(self.length / 2)
@@ -201,7 +202,7 @@ class ChatViewController : UIViewController, UITableViewDataSource, UITextViewDe
         
         print(frequencies)
         
-        let noteDict: [String: Int] = ["C6": 1046, "C#6": 1108, "D6": 1174, "D#6": 1244, "E6": 1318, "F6": 1396, "F#6": 1480, "G6": 1568, "G#6": 1661, "A6": 1760, "A#6": 1864, "B6": 1975, "C7": 2093, "C#7": 2217, "D7": 2349, "D#7": 2489, "E7": 2637, "F7": 2794, "E8": 5274, "N": 0]
+        let noteDict: [String: Int] = ["G5": 784, "A5": 880, "C6": 1046, "C#6": 1108, "D6": 1174, "D#6": 1244, "E6": 1318, "F6": 1396, "F#6": 1480, "G6": 1568, "G#6": 1661, "A6": 1760, "A#6": 1864, "B6": 1975, "C7": 2093, "C#7": 2217, "D7": 2349, "D#7": 2489, "E7": 2637, "F7": 2794, "F#7": 2960, "G7": 3136, "G#7": 3322, "A7": 3520, "A#7": 3729, "B7": 3951, "C8": 4186, "C#8": 4435, "D8": 4698, "D#8": 4978, "E8": 5274, "N": 0]
         
         if message == "For Elise" {
             

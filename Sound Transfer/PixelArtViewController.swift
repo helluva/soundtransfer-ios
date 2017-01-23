@@ -159,7 +159,6 @@ class PixelArtViewController : UIViewController {
             
             if let verticalStackView = self.pixels.arrangedSubviews[col] as? UIStackView {
                 let view = verticalStackView.arrangedSubviews[row]
-                print("\(row), \(col): \(colorIndex)")
                 view.backgroundColor = self.colorForIndex(colorIndex)
             }
             
